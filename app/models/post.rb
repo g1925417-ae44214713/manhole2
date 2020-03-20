@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
   has_one_attached :image
+  belongs_to :user
+  has_many :likes, dependent: :destroy
   validates :caption, presence: true
   validate :image_check
 
@@ -13,7 +15,6 @@ def image_check
     else
       unless image.attached?
         errors.add(:image, 'ファイルを添付してください')
-      end
       end
     end
   end

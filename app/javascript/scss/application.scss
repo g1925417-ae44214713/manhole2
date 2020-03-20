@@ -10,3 +10,46 @@
   overflow: scroll;
   max-height: 490px;
 }
+
+body {
+  padding-top: 60px;
+}
+
+.fnt-color {
+  color: black;
+}
+
+.btn-primary {
+  color: white;
+  background-color: blue;
+  border-color: #CCCCCC;
+  opacity:0.3;
+  
+}
+
+.btn-secondary {
+  color: white;
+  background-color: yellow;
+  border-color: #CCCCCC;
+  opacity:0.3;
+}
+
+.btn-danger {
+  color: white;
+  background-color: red;
+  border-color: #CCCCCC;
+  opacity:0.3;
+}
+
+.like {
+  color: red;
+  text-decoration: none;
+  display: inline;
+}
+
+.unlike {
+  color: gray;
+  text-decoration: none;
+  display: inline;
+}
+

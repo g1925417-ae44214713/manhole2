@@ -1,13 +1,24 @@
-<nav class="navbar navbar-light fixed-bottom justify-content-center" style="background-color: #339966;">
+<nav class="navbar navbar-light fixed-bottom justify-content-center" style="background-color: #FFFFFF; sticky-top">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="/"><i class="fas fa-home"></i></a>
+      <a class="nav-link" href="/"><i class="fas fa-home fnt-color"></i></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/"><i class="far fa-plus-square"></i></a>
+      <%= link_to new_post_path, class: "nav-link" do %>
+        <i class="fas fa-plus fnt-color"></i>
+      <% end %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/"><i class="far fa-user"></i></a>
+      <% if user_signed_in? %>
+        <%= link_to edit_user_registration_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+        <% end %>
+      <% end %>
     </li>
   </ul>
 </nav>
