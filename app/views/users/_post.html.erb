@@ -1,0 +1,5 @@
+<div class="col-3 p-1">
+  <%= link_to post do %>
+    <%= image_tag post.image.variant(resize_to_fill: [430, 600]).processed, class: "img-fluid" %>
+  <% end %>
+</div>

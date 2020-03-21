@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   private
 
   def post_params # ストロングパラメータを定義する
-    params.require(:post).permit(:place, :date, :caption, :image)
+    params.require(:post).permit(:place, :latitude, :longitude, :date, :caption, :image)
   end
 
   def set_post

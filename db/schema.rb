@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_025057) do
+ActiveRecord::Schema.define(version: 2020_03_21_072030) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 2020_03_21_025057) do
     t.date "date"
     t.integer "likes_count"
     t.bigint "user_id", null: false
+    t.decimal "latitude", precision: 7, scale: 5
+    t.decimal "longitude", precision: 8, scale: 5
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
