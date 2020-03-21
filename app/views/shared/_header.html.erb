@@ -1,0 +1,50 @@
+<div class='fixed-top'>
+  <nav class="navbar navbar-light" style="background-color: Transparent; sticky-top">
+
+    <%# ロゴ部分 %>
+    <div class="nav-item">
+      <a class="navbar-brand logo" href="/"><i class="fas fa-stroopwafel"></i>&nbsp;タイトル</a>
+    </div>
+
+
+    <%# メニュー %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="nav-item form-inline mb-2 mb-lg-0" action="/" accept-charset="UTF-8" method="get">
+        <input type="text" name="q" id="q" value="" class="form-control" placeholder="検索" >
+      </form>
+      <% if user_signed_in? %>
+        <%= link_to user_path(current_user), class: "nav-item" do %>
+          <i class="far fa-user"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "nav-item" do %>
+          <i class="far fa-user"></i>
+        <% end %>
+      <% end %>
+    </div>
+
+    <%# リンク付きアイコン %>
+      <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/"><i class="fas fa-home fnt-color"></i></a>
+    </li>
+    <li class="nav-item">
+      <%= link_to new_post_path, class: "nav-link" do %>
+        <i class="fas fa-plus fnt-color"></i>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <% if user_signed_in? %>
+        <%= link_to edit_user_registration_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+
+  </nav>
+</div>
