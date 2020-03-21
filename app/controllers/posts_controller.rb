@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [ :show, :edit, :update, :destroy]
+  before_action :set_post, only: [ :edit, :update, :destroy]
 
   before_action :authenticate_user!
 
   def index
-  @posts = Post.order(created_at: :desc).page(params[:page]).per(8)
+  @posts = Post.with_attached_image.order(created_at: :desc).page(params[:page]).per(8).includes(user: [avatar_attachment: :blob])
   end
 
   def new
@@ -22,6 +22,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.with_attached_image.includes(user: [ avatar_attachment: :blob ]).find(params[:id])
   end
 
   def edit
