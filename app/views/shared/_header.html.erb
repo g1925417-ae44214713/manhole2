@@ -3,7 +3,7 @@
 
     <%# ロゴ部分 %>
     <div class="nav-item">
-      <a class="navbar-brand logo" href="/"><i class="far fa-pause-circle "></i>&nbsp; manhole</a>
+      <a class="navbar-brand logo" href="/"><i class="fas fa-stroopwafel"></i>&nbsp;タイトル</a>
     </div>
 
 
@@ -22,5 +22,29 @@
         <% end %>
       <% end %>
     </div>
+
+    <%# リンク付きアイコン %>
+      <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/"><i class="fas fa-home fnt-color"></i></a>
+    </li>
+    <li class="nav-item">
+      <%= link_to new_post_path, class: "nav-link" do %>
+        <i class="fas fa-plus fnt-color"></i>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <% if user_signed_in? %>
+        <%= link_to edit_user_registration_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "nav-link" do %>
+          <i class="fas fa-user-circle fnt-color"></i>
+        <% end %>
+      <% end %>
+    </li>
+  </ul>
+
   </nav>
 </div>

@@ -12,7 +12,7 @@ ja:
         log_out: ログアウト
         minimum_password_length: "%{length} 文字以上を入力して下さい"
         submit: 更新
-        title: Profile
+        title: プロフィール
       new:
         log_in: ログイン
         minimum_password_length: "%{length} 文字以上を入力して下さい"

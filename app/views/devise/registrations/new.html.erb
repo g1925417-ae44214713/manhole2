@@ -6,13 +6,14 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group">
+      <i class="fas fa-image"></i>
       <%= f.label :プロフィール写真 %>
       <%= f.file_field :avatar, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="form-group">
-      <%= f.label :メールアドレス %>
-      <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
+      <i class="fas fa-envelope"></i>
+      <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "メールアドレスを入力してください" %>
     </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -20,28 +21,26 @@
     <% end %>
 
     <div class="form-group">
-      <%= f.label :名前 %>
-      <%= f.text_field :name, autocomplete: "name", class: "form-control" %>
+      <i class="fas fa-signature"></i>
+      <%= f.text_field :name, autocomplete: "name", class: "form-control", placeholder: "名前を入力してください" %>
     </div>
 
     <div class="form-froup">
-      <%= f.label :コメント %><br />
-      <%= f.text_area :description, autocomplete: "description", class: "form-control" %>
+      <i class="fas fa-closed-captioning"></i>
+      <%= f.text_area :description, autocomplete: "description", class: "form-control", placeholder: "コメントを入力してください" %>
     </div>
 
     <div class="form-group">
       <i class="fas fa-key"></i>
-      <%= f.label :パスワード %>
       <% if @minimum_password_length %>
         <em>(<%= t(".minimum_password_length", length: @minimum_password_length) %>)</em>
       <% end %>
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "パスワード(6文字以上)" %>
     </div>
     
     <div class="form-group">
     <i class="fas fa-key"></i>
-      <%= f.label :パスワード確認 %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワード確認(再入力)" %>
     </div>
     
     <p class="actions">

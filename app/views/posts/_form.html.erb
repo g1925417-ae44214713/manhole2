@@ -7,7 +7,7 @@
   </div>
   <div class="form-group">
   <i class="fas fa-location-arrow"></i>
-    <%= f.text_area :place, class: "form-control", rows: "1" %>
+    <%= f.text_area :place, class: "form-control", rows: "1", placeholder: "入手場所を入力してください"%>
   </div>
   <div class="form-group">
   <i class="fas fa-calendar-alt"></i>
@@ -16,7 +16,7 @@
   </div>
   <div class="form-group">
   <i class="fas fa-closed-captioning"></i>
-    <%= f.text_area :caption, class: "form-control", rows: "5" %>
+    <%= f.text_area :caption, class: "form-control", rows: "5", placeholder: "コメントを入力してください"%>
   </div>
   <p>
     <%= f.submit t(".post"), class: "btn btn-block btn-primary" %>

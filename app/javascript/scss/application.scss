@@ -20,25 +20,33 @@ body {
 }
 
 .btn-primary {
-  color: white;
-  background-color: blue;
+  color: #777777;
+  background-color: Transparent;
   border-color: #CCCCCC;
-  opacity:0.3;
-  
 }
 
 .btn-secondary {
-  color: white;
-  background-color: yellow;
+  color: #777777;
+  background-color: Transparent;
   border-color: #CCCCCC;
-  opacity:0.3;
+}
+
+.btn-light {
+  color: #777777;
+  background-color: Transparent;
+  border-color: #CCCCCC;
 }
 
 .btn-danger {
-  color: white;
-  background-color: red;
-  border-color: #CCCCCC;
-  opacity:0.3;
+  color: #777777;
+  background-color: Transparent;
+  border-color: red;
+}
+
+.btn-warning {
+  color: #777777;
+  background-color: Transparent;
+  border-color: red;
 }
 
 .like {
@@ -48,7 +56,7 @@ body {
 }
 
 .unlike {
-  color: gray;
+  color: blue;
   text-decoration: none;
   display: inline;
 }
