@@ -8,7 +8,7 @@
 
 .scroll {
   overflow: scroll;
-  max-height: 490px;
+  max-height: 415px;
 }
 
 body {
@@ -40,13 +40,13 @@ body {
 .btn-danger {
   color: #777777;
   background-color: Transparent;
-  border-color: red;
+  border-color: #CCCCCC;
 }
 
 .btn-warning {
   color: #777777;
   background-color: Transparent;
-  border-color: red;
+  border-color: #CCCCCC;
 }
 
 .like {
@@ -64,4 +64,5 @@ body {
 nav.pagination {
   display: none;
 }
+
 

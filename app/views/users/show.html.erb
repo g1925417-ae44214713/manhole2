@@ -6,9 +6,6 @@
     <div class="col-4  text-center">
       <h1><%= @user.name %></h1>
       <%= @user.description %>
-      <% if @user.id == current_user.id %>
-        <p><%= link_to t(".edit"), edit_user_registration_path(@user) %></p>
-      <% end %>
     </div>
   </div>
   <div class="post">

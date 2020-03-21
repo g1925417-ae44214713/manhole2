@@ -1,15 +1,18 @@
 <div class="col-lg-3">
-  <div class="card mt-4 mb-4">
+
+  <div class="card border border-0 mt-4 mb-4">
     <%= link_to post do %>
       <!-- image_magickのメソッドを使用して画像サイズを変更して表示 -->
       <%= link_to user_path(post.user) do %>
         <% if post.image.attached? %>
-          <%= image_tag post.image.variant(resize_to_fill: [800, 1200]).processed, class: "card-img" %>
+          <%= image_tag post.image.variant(resize_to_fill: [860, 1200]).processed, class: "card-img" %>
         <% else %>
           <%= image_tag "no_image", class: "card-img" %>
         <% end %>
       <% end %>
     <% end %>
+    <div class="mx-auto">
     <%= render 'likes/like', post: post %>
+    </div>
   </div>
 </div>

@@ -8,17 +8,17 @@
 
   <div class="form-group">
   <i class="fas fa-location-arrow"></i>
-    <%= f.text_area :place, class: "form-control", rows: "1", placeholder: "入手場所を入力してください"%>
+    <%= f.text_area :place, class: "form-control", rows: "1", placeholder: "カードの入手場所を入力してください"%>
   </div>
 
   <div class="form-group">
   <i class="fas fa-globe-americas"></i>
-    <%= f.text_area :latitude, class: "form-control", rows: "1", placeholder: "緯度(EX: 90.00000)"%>
+    <%= f.text_area :latitude, class: "form-control", rows: "1", placeholder: "緯度 (例: 90.00000)  ※カード全面右下(上段)に記載"%>
   </div>
 
   <div class="form-group">
   <i class="fas fa-globe-americas"></i>
-    <%= f.text_area :longitude, class: "form-control", rows: "1", placeholder: "経度(EX: 180.00000)"%>
+    <%= f.text_area :longitude, class: "form-control", rows: "1", placeholder: "経度 (例: 180.00000)  ※カード全面右下(下段)に記載"%>
   </div>
 
   <div class="form-group">
@@ -32,10 +32,13 @@
     <%= f.text_area :caption, class: "form-control", rows: "5", placeholder: "コメントを入力してください"%>
   </div>
 
-  <p>
-    <%= f.submit t(".post"), class: "btn btn-block btn-primary" %>
-  </p>
-  <p>
-    <%= link_to t(".back"), :back, class: "btn btn-block btn-secondary" %>
-  </p>
+  <div class="row col-lg-7 mx-auto">
+    <p class="mr-2">
+      <%= f.submit t(".post"), class: "btn btn-lg btn-secondary" %>
+    </p>
+    <p class="ml-2">
+      <%= link_to t(".back"), :back, class: "btn btn-lg btn-secondary" %>
+    </p>
+  </div>
+
 <% end %>
