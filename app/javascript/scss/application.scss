@@ -65,4 +65,8 @@ nav.pagination {
   display: none;
 }
 
-
+.block {
+    /* 2秒遅れてアニメする */
+    animation-delay: 1s;
+    animation-duration: 20s; 
+}

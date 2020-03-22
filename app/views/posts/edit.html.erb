@@ -6,11 +6,13 @@
   <div class="row no-gutters">
     <div class="card border border-0 col-lg-4 mt-5 mr-3">
       <div class="mt-5">
+        <div class="animated fadeInDown ">
         <% if @post.image.attached? %>
           <%= image_tag @post.image.variant(resize_to_fill: [860, 1200]).processed, class: "card-img" %>
         <% else %>
           <%= image_tag "no_image", class: "card-img" %>
         <% end %> 
+      </div>
       </div>
       </div>
       <div class="col-lg-7 mt-3 card-cody">
