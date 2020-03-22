@@ -44,10 +44,11 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワード確認(再入力)" %>
     </div>
     
-    <p class="actions">
+    <div class="row col-lg-10 mx-auto">
+    <p class="actions mr-2">
       <%= f.submit t(".sign_up"), class: "btn btn-lg btn-secondary" %>
     </p>
-    <p>
+    <p class="ml-2">
       <%= link_to t(".log_in"), user_session_path, class: "btn btn-lg btn-secondary" %>
     </p>
   <% end %>
